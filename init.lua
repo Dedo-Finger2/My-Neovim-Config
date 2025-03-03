@@ -18,6 +18,7 @@ require("config.my-remap")
 require("config.diagnostic-sign-icons")
 require("config.hover-diagnostics")
 require("config.spell-checker")
+require("config.transparent-background")
 require("config.select-colorschema")("kanagawa")
 
 -- Other
