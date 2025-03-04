@@ -5,6 +5,9 @@ cssls_capabilities.textDocument.completion.completionItem.snippetSupport = true
 require('lspconfig').cssls.setup({
 	capabilities = cssls_capabilities,
 })
+require('lspconfig').html.setup({
+	capabilities = cssls_capabilities,
+})
 
 
 -- Reserve a space in the gutter
