@@ -6,7 +6,6 @@ dap.adapters.node2 = {
 	args = { vim.fn.stdpath("data") .. "/mason/packages/node-debug2-adapter/out/src/nodeDebug.js" }
 }
 
-
 dap.adapters["pwa-node"] = {
 	type = "server",
 	host = "localhost",
