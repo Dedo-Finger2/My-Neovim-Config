@@ -10,6 +10,7 @@ require("config.nvim-dap") -- Debugger
 require("config.conform") -- Format on save
 require("config.treesitter") -- Highlight
 require("config.neocord") -- Rich presence
+require("config.discord-presence") -- Rich presence
 
 -- My stuff
 require("config.tint-whitespaces")
