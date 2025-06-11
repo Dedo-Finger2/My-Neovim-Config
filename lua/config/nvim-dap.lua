@@ -1,9 +1,11 @@
+-- Aqui eu configuro o debugger do neovim.
+
 local dap, dapui = require("dap"), require("dapui")
 
 dap.adapters.node2 = {
 	type = "executable",
 	command = "node",
-	args = { vim.fn.stdpath("data") .. "/mason/packages/node-debug2-adapter/out/src/nodeDebug.js" }
+	args = { vim.fn.stdpath("data") .. "/mason/packages/node-debug2-adapter/out/src/nodeDebug.js" },
 }
 
 dap.adapters["pwa-node"] = {

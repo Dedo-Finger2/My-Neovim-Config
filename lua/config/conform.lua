@@ -1,3 +1,7 @@
+-- Aqui eu configuro o formtador de código para determinadas linguagens
+-- de programação. Cada uma possui um formatter específico. Aqui eu
+-- defino como eles funcionam. Inclusive, format on save.
+
 require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
@@ -13,6 +17,7 @@ require("conform").setup({
 		json = { "prettierd", "prettier", stop_after_first = true },
 		html = { "prettierd", "prettier", stop_after_first = true },
 		css = { "prettierd", "prettier", stop_after_first = true },
+		go = { "goimports", "gofumpt", "golines" },
 	},
 	format_on_save = {
 		-- These options will be passed to conform.format()

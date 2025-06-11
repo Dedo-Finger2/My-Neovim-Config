@@ -1,4 +1,10 @@
-local cmp = require('cmp')
+-- Aqui eu configuro o Autocomplete. O CMP
+-- entra em contato com o LSP da linguagem desejada
+-- e então fornece as sugestões de palavras chaves.
+-- Não é o mesmo que sugestões de IA, é apenas
+-- aquelas sugestões padrões que tem até no VSCode.
+
+local cmp = require("cmp")
 
 cmp.setup({
 	sorting = {
@@ -24,30 +30,30 @@ cmp.setup({
 			cmp.config.compare.sort_text,
 			cmp.config.compare.length,
 			cmp.config.compare.order,
-		}
+		},
 	},
 	sources = {
-		{ name = 'nvim_lsp' },
-		{ name = 'luasnip' },
+		{ name = "nvim_lsp" },
+		{ name = "luasnip" },
 	},
 	mapping = cmp.mapping.preset.insert({
-		['<Tab>'] = cmp.mapping(function(fallback)
-			local col = vim.fn.col('.') - 1
+		["<Tab>"] = cmp.mapping(function(fallback)
+			local col = vim.fn.col(".") - 1
 
 			if cmp.visible() then
-				cmp.select_next_item({ behavior = 'select' })
-			elseif col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') then
+				cmp.select_next_item({ behavior = "select" })
+			elseif col == 0 or vim.fn.getline("."):sub(col, col):match("%s") then
 				fallback()
 			else
 				cmp.complete()
 			end
-		end, { 'i', 's' }),
+		end, { "i", "s" }),
 
 		-- Go to previous item
-		['<S-Tab>'] = cmp.mapping.select_prev_item({ behavior = 'select' }),
-		['<C-u>'] = cmp.mapping.scroll_docs(-4),
-		['<C-d>'] = cmp.mapping.scroll_docs(4),
-		['<C-Space>'] = cmp.mapping.complete(),
-		['<CR>'] = cmp.mapping.confirm({ select = false }),
+		["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = "select" }),
+		["<C-u>"] = cmp.mapping.scroll_docs(-4),
+		["<C-d>"] = cmp.mapping.scroll_docs(4),
+		["<C-Space>"] = cmp.mapping.complete(),
+		["<CR>"] = cmp.mapping.confirm({ select = false }),
 	}),
 })
