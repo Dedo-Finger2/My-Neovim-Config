@@ -7,6 +7,10 @@ vim.g.mapleader = " "
 -- Open file explorer
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- Split buffers
+vim.keymap.set("n", "<leader>sh", ":split<CR>")
+vim.keymap.set("n", "<leader>sv", ":vsplit<CR>")
+
 -- Move between buffers
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>")
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>")
