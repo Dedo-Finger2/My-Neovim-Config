@@ -7,6 +7,7 @@ require("config.mason")            -- LSP installer
 require("config.lspconfig")        -- Lspconfiguration
 require("config.cmp")              -- autocomplete
 require("config.nvim-dap")         -- Debugger
+require("config.nvim-dap-go")      -- Go Debugger
 require("config.conform")          -- Format on save
 require("config.treesitter")       -- Highlight
 -- require("config.neocord")          -- Rich presence
